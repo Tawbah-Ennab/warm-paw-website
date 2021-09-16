@@ -1,0 +1,1024 @@
+
+/* @mixin main-border-radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+} */
+/* ******************** Main CSS Section ************************* */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    background-color: #fcfcfcf5;
+}
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        /*home*/
+        "head head"
+        "nav nav"
+        "main main"
+        "intro intro"
+        "info info"
+        "quote quote"
+        "stories stories"
+        "sponsers sponsers"
+        /*about*/
+        "welabout welabout"
+        "about-container about-container"
+        "mission mission"
+        "team team"
+        /*adoptoverview*/
+        "over over"
+        "how how"
+        "fee fee"
+        /*volunteer*/
+        "volunteer volunteer"
+        "vol-info vol-info"
+        /*donation*/
+        "donate donate"
+        "donate-info donate-info"
+        /*adopt cat and dog*/
+        "adoptcat adoptcat"
+        "adoptioncards adoptioncards"
+        /*adoption form*/
+        "jj jj"
+        "adoptionhead adoptionhead"
+        "adoptionform adoptionform"
+        /*footer*/
+        "foot foot";
+}
+:root {
+    --border-radius:10px;
+    --first-color:#df6726;
+    --second-color:#b3571b;
+    --third-color:#7f3811;
+    --fourth-color:#3c4858;
+    --fifth-color:#a6abb3;
+    --sixth-color:#dfdfdf;
+    --btn-padding:10px;
+    --home-margin:3%;
+}
+.btn{
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+    text-decoration: none;
+    padding: var(--btn-padding);
+    box-shadow: 0 3px 0 0 var(--fifth-color);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+}
+.main-card{
+    background-color: rgba(211, 211, 211, 0.219);
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    margin: 0 2% 2% 2%;
+    color:var(--fourth-color);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    transition: transform 250ms ;
+    -webkit-transition: transform 250ms ;
+    -moz-transition: transform 250ms ;
+    -ms-transition: transform 250ms ;
+    -o-transition: transform 250ms ;
+}
+.header-margin{
+    margin: 2% 0;
+    text-align: center;
+}
+/* ******************** Home page CSS ************************* */
+/* **************beginning of header section******************* */
+header {
+    grid-area: head;
+    height: 100%;
+    padding:0.5% 0;
+    border-bottom: 1px solid #cf7c44;
+}
+header .logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo-section .logo-link{
+    text-decoration: none;
+}
+header .logo-section .logo-img {
+    padding-left: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+header .logo-section .logo-img img {
+    width: 25%;
+}
+header .logo-section .logo-img h3{
+    color: var(--first-color);
+    margin-top: 15%;
+}
+header .logo-section .register-buttons {
+    padding-right: 3%;
+}
+header .logo-section .register-buttons .log-in-button,
+.donation-info .how-to-donate-info h3 a ,
+.volunteer-foot h3 a,
+.adoption-corner-container .adopt-side-bar a
+/*same CSS in many pages*/{
+    padding-right: 20px;
+    color:var(--second-color);
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .logo-section .register-buttons .sign-up-button,
+.login-form .login-submit-button,
+.signup-form .signup-submit-button{
+    background-color: var(--first-color);
+    color: var(--third-color);
+    transition: 0.5s;
+}
+header .logo-section .register-buttons .sign-up-button:hover,
+.login-form .login-submit-button:hover,
+.signup-form .signup-submit-button:hover
+/*same CSS in many pages*/{
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+}
+header .logo-section .register-buttons .log-in-button:hover,
+.donation-info .how-to-donate-info h3 a:hover,
+.volunteer-foot h3 a:hover,
+.adoption-corner-container .adopt-side-bar a:hover,
+.all-login-container a:hover,.all-signup-container a:hover
+/*same CSS in many pages*/{
+    color: var(--fourth-color);
+}
+/* ***************Ending of header section********************* */
+/* ***************beginning of navbar section****************** */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #cf7c44;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    overflow: hidden;
+}
+nav .navbar {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+nav .navbar li {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px 10px 10px;
+    color: var(--fourth-color);
+}
+nav .navbar li:hover ,
+nav .navbar li a:hover{
+    color: var(--second-color);
+    cursor: pointer;
+}
+nav .navbar li a{
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+nav .navbar .dropdown{
+    overflow: hidden;
+}
+.dropdown .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--sixth-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display:inline-block;
+}
+.dropdown .dropdown-content a{
+    text-decoration: none;
+    color:var(--second-color);
+}
+.dropdown .dropdown-content li :hover{
+    color:var(--fourth-color);
+}
+/* ***************Ending of navebar section********************* */
+/* ***************beginning of main section******************** */
+main {
+    grid-area: main;
+}
+main .main-img {
+    position: relative;
+    height: 810px;
+}
+main .main-img img {
+    width: 100%;
+}
+main .main-img h1 {
+    color: var(--fourth-color);
+    position: absolute;
+    top: 30%;
+    left: 56%;
+    font-family: "MonteCarlo", cursive;
+    font-size: 4em;
+    font-weight: bold;
+}
+/* ***************Ending of main section********************* */
+/* ***************beginning of intro section***************** */
+.intro {
+    grid-area: intro;
+    position: relative;
+}
+.intro .intro-background{
+    background: url("../img/intro.jpg") center/cover no-repeat; 
+    opacity: 0.5;
+    height: 100vh;
+}
+.intro .intro-items{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    margin-left: 25%;
+    color: var(--fourth-color);
+}
+.intro .intro-items h2, .intro .intro-items p{
+    padding-bottom:5%;
+    text-align: center;
+}
+.intro .intro-items p{
+    font-size: 1em;
+}
+.intro .intro-items .btn:hover,
+.stories .cards-of-stories .story-card .btn:hover,
+.team-contact-container .cards-of-team .team-member-card .btn:hover,
+.submit-button:hover{
+    background-color: var(--first-color);
+    color: var(--third-color);
+}
+/* ***************Ending of intro section******************** */
+/* ***************beginning of numbers section*************** */
+.fetched-info {
+    grid-area: info;
+    background: url("../img/orangeback.jpg") center/cover no-repeat; 
+    opacity: 1;
+    height: 100vh;   
+}
+.fetched-info .info-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fetched-info .info-items .info-head {
+    color: var(--third-color);
+    margin-top: 10%;
+}
+.fetched-info .info-items .info-head h2{
+    margin-bottom: 3%;
+}
+.fetched-info .info-items .info-numbers{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.fetched-info .info-items .info-numbers .info-for-each-number{
+    border: 2px dashed var(--second-color);
+    margin:var(--home-margin);
+    width: 100%;
+    height: 100%;
+}
+.fetched-info .info-items .info-numbers .info-for-each-number .counter{
+    font-size: 3em;
+    padding: 15% 15% 5% 15%;
+    color:var(--third-color);
+}
+.fetched-info .info-items .info-numbers .info-for-each-number h2{
+    padding:0 0 15% 15%;
+    color: var(--third-color);
+}
+/* ***************Ending of numbers section******************** */
+/* ***************beginning of quote section****************** */
+.quote-welfare{
+    grid-area: quote;
+    display: flex;
+    justify-content: center;
+    margin:10% 3% 1%;
+    height: 90vh;
+}
+.quote-welfare div{
+    background: url("../img/quote-right.svg") center/contain no-repeat; 
+    width: 20%;
+    height: 40vh;
+    margin-right: 3%;
+}
+.quote-welfare h3{
+    margin-right: 5%;
+    width: 50%;
+    text-align: justify;
+    font-family: 'Caveat', cursive;
+    font-size: 1.75em;
+    color:var(--fourth-color);
+}
+.quote-welfare img{
+    height: 65%;
+    width: 50%;
+}
+/* ***************Ending of quote section****************** */
+/* ***************beginning of main section****************** */
+.stories {
+    grid-area: stories;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background: url("../img/grayback.jpg") center/cover no-repeat; 
+    opacity: 1;
+}
+.stories .stories-head {
+    margin:4% 0 1% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--first-color);
+}
+.stories .cards-of-stories {
+  display: flex;
+  margin:var(--home-margin);
+}
+.stories .cards-of-stories .story-card:hover,
+.team-contact-container .cards-of-team .team-member-card:hover {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+.stories .cards-of-stories .story-card img,
+.team-contact-container .cards-of-team .team-member-card img{
+  width: 100%;
+  height: 50%;
+  border-radius: 5% 5% 0 0;
+  -webkit-border-radius: 5% 5% 0 0;
+  -moz-border-radius: 5% 5% 0 0;
+  -ms-border-radius: 5% 5% 0 0;
+  -o-border-radius: 5% 5% 0 0;
+}
+.stories .cards-of-stories .story-card h5,
+.team-contact-container .cards-of-team .team-member-card h5  {
+  font-size: 1em;
+  color:var(--first-color);
+}
+.stories .cards-of-stories .story-card p,
+.team-contact-container .cards-of-team .team-member-card p {
+  font-size: 0.8em;
+  color: var(--first-color);
+  margin-bottom: 7%;
+}
+.stories .cards-of-stories .story-card h5,.story-card p {
+  padding: 5%;
+}
+
+/* ***************Ending of main section************************* */
+/* ***************beginning of sponsers section******************** */
+.sponsers{
+    grid-area: sponsers;
+    height: 200px;
+    width: 100%;
+    margin: 10% 0 5% 0;
+}
+.sponsers h1{
+    margin: 0 40% 6% 40%;
+    color: var(--second-color);
+}
+.sponsers .sponsers-logos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 30%;
+    margin: 0 15%;
+}
+/* ***************Ending of sponsers section************************* */
+/* ***************beginning of footer section******************** */
+footer {
+  grid-area: foot;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+footer .footer-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 0 5%;
+}
+footer .footer-images .footer-logo{
+    display: flex;   
+}
+footer .footer-images .footer-logo img{
+    width:25%;
+    height:25%;
+    margin-top:15% ;
+}
+footer .footer-images .footer-logo h2{
+    color: var(--first-color);
+    margin-top: 30%;
+}
+footer .footer-images .footer-social-media{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+    width:20%;
+    font-size: 2em;
+}
+footer h5{
+    margin:1% 1% 2% 1%;
+    align-self: center;
+    color: var(--first-color);
+}
+.fa-facebook{
+    color:rgb(55, 55, 170);
+}
+.fa-instagram{
+    color:rgb(248, 186, 14);
+}
+.fa-youtube{
+    color:rgb(194, 18, 18);
+}
+.fa-envelope{
+    color:rgb(133, 29, 143);
+}
+.fa-twitter{
+    color:rgb(11, 188, 194);
+}
+.fa-facebook:hover,.fa-instagram:hover,
+.fa-youtube:hover,.fa-envelope:hover,.fa-twitter:hover,.fa-google:hover{
+    color:var(--fifth-color);
+}
+/* ***************Ending of footer section********************* */
+/***************************************************************************************************/
+/* ******************** about page CSS ************************* */
+/* ************************beginning of welcoming section ************************ */
+.welcome-section{
+    grid-area: welabout;
+    height: 100vh;
+}
+.welcome-section .welcome-image{
+    height:100%;
+    width:100%;
+    opacity: 0.7;
+    position: relative;
+}
+.welcome-section .welcome-header{
+    position: absolute;
+    color:var(--first-color);
+    top: 40%;
+    margin-left: 35%;
+}
+/* ***************Ending of welcoming section********************* */
+/* ************beginning of about main section***************** */
+.about-container{
+    grid-area: about-container;
+    display:flex;
+    flex-direction: column;
+    color: var(--second-color); 
+}
+.about-container,.mission{
+    text-align: center;
+    margin: 1% 10% ;
+}
+/* ***************Ending of about main section********************* */
+/* ***************beginning of mission section*************** */
+.mission{
+    grid-area: mission;
+    position: relative;
+    color: var(--fourth-color);
+}
+/* ***************Ending of mission section****************** */
+/* ***************beginning of team section***************** */
+.team-contact-container{
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    background: url("../img/tcback.jpg") center/cover no-repeat; 
+    height: 100%;
+    width: 100%;
+    color: var(--second-color);
+}
+.team-contact-container .team-container{
+    text-align: center;
+    margin: 5% 10%;
+    color: var(--third-color);
+}
+.team-contact-container .cards-of-team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-contact-container .cards-of-team .team-member-card  {
+    width: 30%;
+    height: 450px;
+}
+.team-member-card p,.team-member-card h5,.contact-container h1  {
+    padding: 5%;
+}
+/* ***************Ending of team section******************** */
+/* **************beginning of team section***************** */
+.contact-container{
+    margin:0 5% 5% 3% ;
+}
+.contact-container .contact-main{
+    grid-area: contact;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+.contact-container .contact-main .contact-info h4{
+    padding:3%;
+}
+/***************** form section *****************/
+.contact-fieldset{
+    color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 50%;
+    text-align: center;
+    border: 1.5px dashed var(--second-color);
+    padding: 2%;
+    
+}
+/*same CSS in different forms and pages */
+.contact-fieldset input, .contact-fieldset textarea,
+.adoption-form input, .pet-info-ccontainer textarea, 
+.login-form input,.signup-form input{
+    width: 85%;
+    margin:0 0 2% 7.5%;
+    padding: 1%;
+    outline: none;
+    color: var(--first-color);
+    border: 2px solid var(--sixth-color);
+    transition: 0.5s;
+}
+.contact-fieldset input:focus:not([type="submit"]), .contact-fieldset textarea:focus,
+.adoption-form input:focus:not([type="submit"]),.pet-info-ccontainer textarea:focus,
+.login-form input:focus:not([type="submit"]),
+.signup-form input:focus:not([type="submit"]){
+    border: 2px solid var(--first-color);
+}
+.contact-fieldset ::placeholder,
+.adoption-form ::placeholder, 
+.login-form ::placeholder,
+.signup-form ::placeholder{
+    color: var(--first-color);
+}
+.contact-fieldset .submit-button,
+.adoption-form .submit-button{
+    padding: 2%;
+    width: 20%;
+    margin-left: 40%;
+    font-size: 0.9em;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    transition: 0.7s;
+}
+/* ***************Ending of team section******************** */
+/***************************************************************************************************/
+/* ******************** volunteer page CSS ************************* */
+/* ***************beginning of main section******************** */
+.volunteer-container{
+    border-bottom: 1px dashed var(--second-color);
+    grid-area: volunteer;
+    color:var(--second-color);
+}
+.volunteer-container .volunteer-main{
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 5%;
+    text-align: justify;
+    color:var(--second-color);
+    padding-bottom: 2%;
+}
+.volunteer-container .volunteer-main img{
+    height:50%;
+    width:50%;
+    padding-left: 5%;
+}
+/* ***************Ending of main section********************* */
+/* ***************beginning of info section******************** */
+.volunteer-info{
+    grid-area: vol-info;
+    color:var(--second-color);   
+}
+.volunteer-info h1{
+    margin-bottom: 2%;
+}
+.volunteer-info .need-info,
+.volunteer-info .volunteer-hours,
+.volunteer-info .volunteer-foot{
+    text-align:center;
+    margin: 3% 5%;
+    padding-bottom:5% ;
+}
+/* ***************Ending of info section********************* */
+/***************************************************************************************************/
+/* ******************** donation page CSS ************************* */
+/* ***************beginning of main section******************** */
+.donation-container{
+    grid-area: donate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--second-color);
+    margin:3% 5%;
+    text-align: justify;
+    border-bottom: 1px dashed var(--first-color);
+    padding-bottom: 5%;
+}
+.donation-container .donation-main img{
+    float: right;
+    width:50%;
+    height: 70%;
+    margin: 0 0 2% 3%;
+}
+/* ***************Ending of main section********************* */
+/* ***************beginning of how to donate section******************** */
+.donation-info {
+    grid-area: donate-info;
+    padding-bottom: 5%;
+}
+.donation-info .how-to-donate-info{
+    display: flex;
+    flex-direction: column;
+    color: var(--second-color);
+    text-align: center;
+}
+.donation-info .how-to-donate-info h3 {
+    margin-bottom: 2%;
+}
+/* ***************Ending of how to donate section********************* */
+/***************************************************************************************************/
+/* ******************** adopt overview page CSS ************************* */
+/* *************beginning of adopt overview section*************** */
+.adopt-container{
+    grid-area: over;
+    display: flex;
+}
+.adopt-container{
+    margin:0 5%;
+}
+.adopt-container .adoption-overview ,
+.donation-container .donation-main{/*part of donation page have the same css*/
+    color: var(--second-color);
+    width: 100%;
+    margin-top: 1%;
+}
+.adopt-container .adoption-overview div p{
+    text-align: justify;
+    color: var(--second-color);
+}
+.adopt-container .adoption-overview div img{
+    width:50%;
+    height: 80vh;
+    float: right;
+    margin-left: 2%;
+    opacity: 0.9;
+}
+/* ***************Ending of overview section********************* */
+/* ************beginning of how to adopt section**************** */
+.how-to-adopt {
+    grid-area: how; 
+    position: relative;
+}
+.how-to-adopt .how-background{
+    background: url("../img/how.jpg") center/cover no-repeat;
+    opacity: 0.4; 
+    height: 100vh;
+}
+.how-to-adopt .how-to-adopt-items{
+    color: var(--fourth-color);
+    position: absolute;
+    top:3%;
+    margin: 5%;
+    text-align: justify;
+
+}
+/* ************Ending of how to adopt section****************** */
+/* ***************beginning of fee section******************** */
+.adoption-fee{
+    grid-area: fee;
+    color: var(--second-color);
+    background-color: #fffaf6;
+    padding:  5% 0;
+}
+.adoption-fee .cat-adoption,
+ .adoption-fee .dog-adoption{
+    display: flex;
+    margin: 4%;
+}
+.adoption-fee .cat-adoption{
+    padding-bottom: 3%;
+}
+.adoption-fee .cat-adoption img,
+ .adoption-fee .dog-adoption img{
+    width:35%;
+    margin: 2% 0 0 10%;
+    opacity: 0.8;
+}
+.adopt-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left:3% ;
+}
+.adopt-flex ul{
+    margin-left: 4%;
+}
+.adoption-fee .cat-adoption div .btn,
+.adoption-fee .dog-adoption div .btn{
+    background-color: var(--first-color);
+    color: var(--third-color);
+    font-size: 0.9em;
+    margin: 4%;
+    width: 16%;
+}
+.adoption-fee .cat-adoption div .btn:hover,
+.adoption-fee .dog-adoption div .btn:hover{
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+}
+/* ***************Ending of fee section********************* */
+/***************************************************************************************************/
+/* ******************** adoption cat and dog pages CSS ************************* */
+/* *****************beginning of main section******************** */
+.adoption-corner-container{
+    grid-area: adoptcat;
+    display: flex;
+    flex-direction: column;
+    color: var(--second-color);
+}
+.adoption-corner-container .adoption-corner-flex{
+    display: flex;
+}
+.adoption-corner-container .adopt-side-bar{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 5%;
+    border-right: 1px dashed var(--second-color)
+}
+.adoption-corner-container .adopt-side-bar a{
+    padding: 10%;
+    border-bottom:  1px dashed var(--second-color);
+}
+.adoption-corner-container .adopt-cat-container .adopt-cat-header{
+    margin: 3% 0;
+    width: 75%;
+    text-align: justify;
+    color: var(--second-color);
+    padding-bottom: 5%;
+}
+/* ************** adoption cards section****************** */
+.adoption-cards-container{
+    grid-area: adoptioncards;
+    width: 90%;
+    height: 100vh;
+    border-top:1px dashed var(--second-color);
+    margin: 5%;
+    padding: 5%;
+}
+.adoption-cards-container .cards-flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.adoption-cards-container .cards-flex .adopt-card{
+    background-color:var(--sixth-color);
+    width: 35%;
+    height: 70%;
+    margin: 3%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.adoption-cards-container .cards-flex .adopt-card:hover{
+    transform: rotateY(180deg);
+}
+.adoption-cards-container .cards-flex .adopt-card .adopt-card-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.adoption-cards-container .cards-flex .adopt-card .adopt-card-image img{
+    width: 100%;
+    height: 100%;  
+}
+.adoption-cards-container .cards-flex .adopt-card .card-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.adoption-cards-container .cards-flex .adopt-card .card-content h4{
+    margin: 6%;
+    color: var(--fourth-color);
+}
+.adoption-cards-container .cards-flex .adopt-card .card-content a{
+    margin: 7%;
+    color: var(--first-color);
+    text-decoration: none; 
+    font-size: 1em;
+}
+/* *****************Ending of adoption cat page******************** */
+/***************************************************************************************************/
+/* ******************** adoption form page CSS ************************* */
+/* *****************beginning of main section******************** */
+.form-background{
+    background: url("../img/wave3.png") center/cover no-repeat; 
+    grid-area: jj;
+}
+.form-container{
+    grid-area: adoptionhead;
+    margin: 0 15%;
+    text-align: justify;
+    color: var(--second-color);
+}
+.form-container h1{
+    text-align: center;
+    padding: 2%;
+}
+.form-container .form-header h5{
+    padding:2% 0;
+    border-bottom: 1px solid var(--second-color);
+}
+.adoption-form{
+    grid-area: adoptionform;
+    color: var(--second-color);
+    margin:0 10%;
+}
+.adoption-form .submit-button{
+    width:10%;
+    padding: 1%;
+}
+/* *****************ending of main section******************** */
+/***************************************************************************************************/
+/* ******************** login page CSS ************************* */
+/* *****************beginning of main section******************** */
+.login-background{
+    background: url("../img/yellow1.jpg") center/cover no-repeat; 
+    height: 100%;
+    text-align: center;
+    padding-top: 1.9%;
+}
+.all-login-container,
+.all-signup-container{
+    margin-right: 50%;
+    height: 130vh;
+}
+.all-login-container a,
+.all-signup-container a{
+    color:var(--second-color);
+    text-decoration: none;
+    transition: 0.5s;
+    width: 100%;
+    padding-left: 1%;
+    font-size: 1em;
+    display: inline-block;
+}
+.all-login-container a:hover,
+.all-signup-container a:hover{
+    color: var(--third-color);
+}
+.all-login-container .login-logo,
+.all-signup-container .login-logo{
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.all-login-container .login-logo img,
+.all-signup-container .login-logo img{
+    width:10%;
+    height:80%;
+}
+.all-login-container .login-logo h2,
+.all-signup-container .login-logo h2{
+    color: var(--first-color);
+    font-size: 1.2em;
+    padding-bottom: 1%;
+    margin-top: 7%;
+}
+.login-form-container,
+.signup-form-container{
+    color: var(--fourth-color);
+    margin:1% 40% 7% 10%;
+    padding: 3%;
+}
+.login-form-container .login-form,
+.signup-form-container .signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    padding:4%;
+    background: rgba(230, 220, 165, 0.459);
+    color: var(--first-color);
+    width: 170%;
+    height:100vh;
+}
+.login-form-container .login-form .login-labels input,
+.signup-form-container .signup-form .signup-labels input{
+    font-size: 0.8em;
+    font-family:Arial, FontAwesome;
+    padding: 2%;
+    width: 70%;
+    margin-bottom:5%;
+}
+.login-form .login-submit-button,
+.signup-form .signup-submit-button{
+    width:20%;
+    height: 5.5%;
+    border: 0;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.login-form .social-header,
+.signup-form .social-header{
+    margin:5% 0 0;
+    border-top: 1px solid var(--second-color);
+    padding: 2%;
+}
+.login-form .login-social-media{
+    display: flex;
+    justify-content: space-between;
+    margin:0 0 10% 0;
+    width:35%;
+    font-size: 1.5em;
+    padding-bottom: 5%;
+}
+/* *****************ending of main section******************** */
+/***************************************************************************************************/
+/* ******************** signup page CSS ************************* */
+/* *****************beginning of main section******************** */
+.signup-background{
+    background: url("../img/yellow2.jpg") center/cover no-repeat; 
+    height: 180vh;
+    text-align: center;
+    padding-top: 1.9%;
+}
+.all-signup-container h4{
+    color: var(--first-color);
+    padding: 5%;
+}
+.signup-form-container .signup-form{
+    color: var(--first-color);
+    width: 170%;
+    height:130vh;
+}
+.signup-form .signup-social-media{
+    display: flex;
+    justify-content: space-between;
+    width:35%;
+    font-size: 1.5em;
+    padding-top: 5%;
+}
+/* *****************ending of main section******************** */

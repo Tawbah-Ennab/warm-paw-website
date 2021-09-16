@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/7dd43b4915.js" crossorigin="anonymous"></script>
+    <title>Warm Paw - Adoption Form</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
+</head>
+<body>
+
+    <!-- the header section contains logo and login and signup buttons-->
+    <header>
+        <!-- logo image -->
+        <div class="logo-section">
+
+            <a href="warm-paw-website.html" class="logo-link">
+                <div class="logo-img">
+                    <img src="./assets/img/logo.png" alt="logo">
+                    <h3>WARM PAW</h3>
+                </div>
+            </a>
+
+            <div class="register-buttons">
+                <a href="./login.html" class="log-in-button">Log in</a>
+                <a href="./signup.html" class=" btn sign-up-button">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ************************ navbar ************************ -->
+    <nav >
+        <ul class="navbar">
+            <li><a href="./warm-paw-website.html">HOME</a></li>
+
+            <div class="dropdown">
+                <li>SERVICES</></li>
+                    <ul class="dropdown-content" >
+                        <li><a href="./shop"> SHOP</a></li>
+                        <li> <a href="./clinics"> CLINICS</a> </li>  
+                        <li> <a href="./traveling"> TRAVLING DOCUMENTS</a> </li>
+                    </ul> 
+            </div>
+
+            <div class="dropdown">
+                <li>ADOPT</li>
+                <ul class="dropdown-content">
+                    <li><a href="./adopt.html">ADOPT OVERVIEW</a></li>
+                    <li><a href="./adopt-cat.html">ADOPT CAT</a></li>
+                    <li><a href="./adopt-dog.html">ADOPT DOG</a></li>
+                    <li><a href="./adopt-form.html">ADOPT FORM</a></li>
+                </ul>
+            
+            </div>
+
+            <div class="dropdown">
+                <li>GET INVOLVED</li>
+                <ul class="dropdown-content">
+                    <li><a href="./donation.html">DONATION</a></li>
+                    <li><a href="./volunteer.html">VOLUNTEER</a></li>
+                </ul>
+            
+            </div>
+
+            <li><a href="./about.html">ABOUT</a></li>
+            
+        </ul>
+    </nav>
+    <!-- ************************ form section ************************ -->
+    <div class="form-background">
+        <div class="form-container">
+            <h1>Adoption Form</h1>
+            <div class="form-header">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione natus repellat impedit laborum ad? Quia quisquam optio placeat,
+                soluta consectetur provident quo laborum ducimus aut laboriosam,
+                expedita accusamus, nihil dicta.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione natus repellat impedit laborum ad? Quia quisquam optio placeat,
+                soluta consectetur provident quo laborum ducimus aut laboriosam,
+                expedita accusamus, nihil dicta.</p>
+                <h5>* required fileds</h5>
+            </div>
+        </div>
+
+        <form action="/adoption-form" method="post" class="adoption-form">
+            <div class="adopter-info-container">
+                <h2 class="header-margin">Adopter Information</h2>
+                <input type="text" name="fName" id="fName" placeholder="*First Name" required>
+                <input type="text" name="lName" id="lName" placeholder="*Last Name" required>
+                <input type="number" name="uage" id="uage" placeholder="*Your Age" required>
+                <input type="number" name="numofadults" id="numofadults" placeholder="*Number of Adults in your house?" required>
+                <input type="number" name="under18" id="under18" placeholder="*Number of people under 18 in your house?" required>
+
+                <input list="pet-allergies" name="allergies" id="allergies" placeholder="Does anyone have animals allergies?" required>
+                <datalist id="pet-allergies">
+                    <option value="Yes"></option>
+                    <option value="No"></option>
+                </datalist>
+
+                <input list="adopter-typeofwork" name="typeofwork" id="typeofwork" placeholder="*Do you work :" required>
+                <datalist id="adopter-typeofwork">
+                    <option value="Full Time Jop"></option>
+                    <option value="Part Time Jop"></option>
+                    <option value="Attend School"></option>
+                    <option value="Attend Colleague"></option>
+                </datalist>
+
+                <input list="relationshipstatus" name="relationship" id="relationship" placeholder="*Your relationship status :" required>
+                <datalist id="relationshipstatus" >
+                    <option value="Single"></option>
+                    <option value="Married "></option>
+                    <option value="Divorced "></option>
+                    <option value="Widowed"></option>
+                    <option value="Engaged"></option>
+                </datalist>
+
+                <input type="text" name=" responsibleforthispet" id="responsibleforthispet" placeholder="*who will be responsible for this pet?" required>
+                <input type="text" name=" responsibleaway" id="responsibleaway" placeholder="*who will be responsible for this pet when you are away?" required>
+            </div>
+
+            <div class="pet-info-ccontainer">
+                <h2 class="header-margin">Pet Information</h2>
+                <input type="text" name="petName" id="petName" placeholder="*Pet Name" required>
+                <input type="text" name="petid" id="petid" placeholder="*Pet ID" required>
+                <input type="text" name="forwhom" id="forwhom" placeholder="*who is this pet for?" required>
+                <textarea name="notes" id="notes" cols="30" rows="10" placeholder="*why are you want to adopt a pet?" required></textarea>
+
+                <input list="pethome" name="wheretolive" id="wheretolive" placeholder="*where it will live?" required>
+                <datalist id="pethome" >
+                    <option value="Outdoor"></option>
+                    <option value="Indoor"></option>
+                    <option value="Other "></option>
+                </datalist>
+                
+                <input list="pet-adoption" name="anotherpet" id="anotherpet" placeholder="Do you adopt another per before?" required>
+                <datalist id="pet-adoption">
+                    <option value="Yes"></option>
+                    <option value="No"></option>
+                </datalist>
+            </div>
+
+            <div class="adopter-address-container">
+                <h2 class="header-margin">Residential Information</h2>
+                <input type="text" name="uaddress" id="uaddress" placeholder="*Address" required>
+                <input type="text" name="ucity" id="ucity" placeholder="*City" required>
+                <input type="number" name="uzipnumber" id="uzipnumber" placeholder="*Zip" required>
+                <input type="tel" name="uNumber" id="uNumber" placeholder="*Phone Number" required>
+                <input type="email" name="uEmail" id="uEmail" placeholder="*Email" required>
+                
+                <input list="adopter-residence" name="residence" id="residence" placeholder="*Type of Residence :" required>
+                <datalist id="adopter-residence">
+                    <option value="House"></option>
+                    <option value="Town House"></option>
+                    <option value="Apartment"></option>
+                </datalist>
+
+                <input list="housegardenforpet" name="housegarden" id="housegarden" placeholder="Do you have a garden?" required>
+                <datalist id="housegardenforpet">
+                    <option value="Yes"></option>
+                    <option value="No"></option>
+                </datalist>
+            </div>
+
+            <div class="info-aprove-container">
+                <h4 class="header-margin">Information Approval</h4>
+                <h5 class="header-margin">If you confirm that the above information are true , please dothe follow :</h5>
+                <input type="text" name="sign" id="sign" placeholder="*Sign Here" required>
+                <input type="date" name="adoptdate" id="adoptdate" placeholder="*Adoption Date" required>
+            </div>
+
+            <input type="submit" value="Submit" class="btn submit-button">
+        </form>
+    </div>
+    <!-- ***************** footer section ***************** -->
+
+    <footer>
+        <div class="footer-images">
+            <div class="footer-logo">
+                <img src="./assets/img/logo.png" alt="logo">
+                <h2>WARM PAW</h2>
+            </div>
+            <div class="footer-social-media">
+                <a href="#" ><i class="fab fa-facebook"></i></a>
+                <a href="#" ><i class="fab fa-twitter"></i></a>
+                <a href="#" ><i class="fab fa-instagram"></i></a>
+                <a href="#" ><i class="fab fa-youtube"></i></a>
+                <a href="#" ><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <h5>@ All copyrights to Tawbah Abu-Ennab </h5>
+    </footer>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>

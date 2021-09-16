@@ -1,0 +1,678 @@
+
+/* @mixin main-border-radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+} */
+/* ******************** Main CSS Section ************************* */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+grid-container {
+    background-color: #f5f9fd;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "head head"
+        "nav nav"
+        "main main"
+        "intro intro"
+        "info info"
+        "quote quote"
+        "stories stories"
+        "sponsers sponsers"
+        "about-container about-container"
+        "mission mission"
+        "team team"
+        "contact contact"
+        "over over"
+        "how how"
+        "fee fee"
+        "foot foot";
+}
+:root {
+    --border-radius:10px;
+    --first-color:#df6726;
+    --second-color:#b3571b;
+    --third-color:#7f3811;
+    --fourth-color:#3c4858;
+    --fifth-color:#a6abb3;
+    --sixth-color:#dfdfdf;
+    --btn-padding:10px;
+    --footer-background:#f8f8f8; 
+    --home-margin:3%;
+}
+.btn{
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+    text-decoration: none;
+    padding: var(--btn-padding);
+    box-shadow: 0 3px 0 0 var(--fifth-color);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+.main-card{
+    background-color: rgba(211, 211, 211, 0.219);
+    width: 45%;
+    height:95%;
+    text-align: center;
+    margin: 0 2% 2% 2%;
+    color:var(--fourth-color);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    transition: transform 250ms ;
+    -webkit-transition: transform 250ms ;
+    -moz-transition: transform 250ms ;
+    -ms-transition: transform 250ms ;
+    -o-transition: transform 250ms ;
+}
+.header-margin{
+    margin-bottom: 2%;
+    text-align: center;
+}
+/* ******************** Home page CSS ************************* */
+/* **************beginning of header section******************* */
+header {
+    grid-area: head;
+    height: 100%;
+    padding:0.5% 0;
+    border-bottom: 1px solid #cf7c44;
+    background-color: white;
+}
+header .logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo-section .logo-img {
+    padding-left: 40%;
+    display: flex;
+}
+header .logo-section .logo-img img {
+    width: 20%;
+    height: 15%;
+}
+header .logo-section .logo-img h2{
+    color: var(--first-color);
+    margin-top: 9%;
+}
+header .logo-section .register-buttons {
+    padding-right: 3%;
+}
+header .logo-section .register-buttons .log-in-button {
+    padding-right: 20px;
+    color:var(--third-color);
+    text-decoration: none;
+}
+header .logo-section .register-buttons .sign-up-button{
+background-color: var(--first-color);
+color: var(--third-color);
+}
+header .logo-section .register-buttons .sign-up-button:hover {
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+}
+header .logo-section .register-buttons .log-in-button:hover{
+    color: var(--fourth-color);
+}
+/* ***************Ending of header section********************* */
+
+/* ***************beginning of navbar section****************** */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #cf7c44;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    overflow: hidden;
+}
+nav .navbar {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+nav .navbar li {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px 10px 10px;
+    color: var(--fourth-color);
+}
+nav .navbar li:hover ,
+nav .navbar li a:hover{
+    color: var(--second-color);
+    cursor: pointer;
+}
+nav .navbar li a{
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+nav .navbar .dropdown{
+    overflow: hidden;
+}
+.dropdown .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--sixth-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display:inline-block;
+}
+.dropdown .dropdown-content a{
+    text-decoration: none;
+    color:var(--second-color);
+}
+.dropdown .dropdown-content li :hover{
+    color:var(--fourth-color);
+}
+/* ***************Ending of navebar section********************* */
+
+/* ***************beginning of main section******************** */
+main {
+    grid-area: main;
+}
+main .main-img {
+    position: relative;
+    height: 810px;
+}
+main .main-img img {
+    width: 100%;
+}
+main .main-img h1 {
+    color: var(--fourth-color);
+    position: absolute;
+    top: 30%;
+    left: 56%;
+    font-family: "MonteCarlo", cursive;
+    font-size: 4em;
+    font-weight: bold;
+}
+/* ***************Ending of main section********************* */
+
+/* ***************beginning of intro section***************** */
+.intro {
+    grid-area: intro;
+    position: relative;
+}
+.intro .intro-background{
+    background: url("../img/intro.jpg") center/cover no-repeat; 
+    opacity: 0.5;
+    height: 100vh;
+}
+.intro .intro-items{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    margin-left: 25%;
+    color: var(--fourth-color);
+}
+.intro .intro-items h2, .intro .intro-items p{
+    padding-bottom:5%;
+    text-align: center;
+}
+.intro .intro-items p{
+    font-size: 1em;
+}
+.intro .intro-items .btn:hover,
+.stories .cards-of-stories .story-card .btn:hover,
+.team .cards-of-team .team-member-card .btn:hover,
+.submit-button:hover{
+    background-color: var(--first-color);
+    color: var(--third-color);
+}
+/* ***************Ending of intro section******************** */
+
+/* ***************beginning of numbers section*************** */
+.fetched-info {
+    grid-area: info;
+    background: url("../img/orangeback.jpg") center/cover no-repeat; 
+    opacity: 1;
+    height: 100vh;   
+}
+.fetched-info .info-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fetched-info .info-items .info-head {
+    color: var(--third-color);
+    margin-top: 10%;
+}
+.fetched-info .info-items .info-head h2{
+    margin-bottom: 3%;
+}
+.fetched-info .info-items .info-numbers{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.fetched-info .info-items .info-numbers .info-for-each-number{
+    border: 2px dashed var(--second-color);
+    margin:var(--home-margin);
+    width: 100%;
+    height: 100%;
+}
+.fetched-info .info-items .info-numbers .info-for-each-number .counter{
+    font-size: 3em;
+    padding: 15% 15% 5% 15%;
+    color:var(--third-color);
+}
+.fetched-info .info-items .info-numbers .info-for-each-number h2{
+    padding:0 0 15% 15%;
+    color: var(--third-color);
+}
+/* ***************Ending of numbers section******************** */
+
+/* ***************beginning of quote section****************** */
+.quote-welfare{
+    grid-area: quote;
+    display: flex;
+    justify-content: center;
+    margin:9% 3%;
+}
+.quote-welfare div{
+    background: url("../img/quote-right.svg") center/contain no-repeat; 
+    width: 20%;
+    height: 50vh;
+    margin-right: 3%;
+}
+.quote-welfare h3{
+    margin-right: 5%;
+    width: 50%;
+    text-align: justify;
+    font-family: 'Caveat', cursive;
+    font-size: 1.75em;
+    color:var(--fourth-color);
+}
+.quote-welfare img{
+    height: 55%;
+    width: 50%;
+}
+/* ***************Ending of quote section****************** */
+
+/* ***************beginning of main section****************** */
+.stories {
+    grid-area: stories;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background: url("../img/grayback.jpg") center/cover no-repeat; 
+    opacity: 1;
+}
+.stories .stories-head {
+    margin:4% 0 1% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--first-color);
+}
+.stories .cards-of-stories {
+  display: flex;
+  margin:var(--home-margin);
+}
+.stories .cards-of-stories .story-card:hover,
+.team .cards-of-team .team-member-card:hover {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+.stories .cards-of-stories .story-card img,
+.team .cards-of-team .team-member-card img{
+  width: 100%;
+  height: 50%;
+  border-radius: 5% 5% 0 0;
+  -webkit-border-radius: 5% 5% 0 0;
+  -moz-border-radius: 5% 5% 0 0;
+  -ms-border-radius: 5% 5% 0 0;
+  -o-border-radius: 5% 5% 0 0;
+}
+.stories .cards-of-stories .story-card h5,
+.team .cards-of-team .team-member-card h5  {
+  font-size: 1em;
+  color:var(--first-color);
+}
+.stories .cards-of-stories .story-card p,
+.team .cards-of-team .team-member-card p {
+  font-size: 0.8em;
+  color: var(--first-color);
+  margin-bottom: 7%;
+}
+.stories .cards-of-stories .story-card h5,.story-card p {
+  padding: 5%;
+}
+
+/* ***************Ending of main section************************* */
+
+/* ***************beginning of sponsers section******************** */
+.sponsers{
+    grid-area: sponsers;
+    height: 200px;
+    width: 100%;
+    margin: 10% 0 5% 0;
+}
+.sponsers h1{
+    margin: 0 40% 6% 40%;
+    color: var(--second-color);
+}
+.sponsers .sponsers-logos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 30%;
+    margin: 0 15%;
+}
+/* ***************Ending of sponsers section************************* */
+
+/* ***************beginning of footer section******************** */
+footer {
+  grid-area: foot;
+  display: flex;
+  flex-direction: column;
+  background-color:var(--footer-background);
+  width: 100%;
+}
+footer .footer-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 0 5%;
+}
+footer .footer-images .footer-logo{
+    display: flex;   
+}
+footer .footer-images .footer-logo img{
+    width:25%;
+    height:25%;
+    margin-top:15% ;
+}
+footer .footer-images .footer-logo h2{
+    color: var(--first-color);
+    margin-top: 30%;
+}
+footer .footer-images .footer-social-media{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+    width:20%;
+    font-size: 2em;
+}
+footer h5{
+    margin:1% 1% 2% 1%;
+    align-self: center;
+    color: var(--first-color);
+}
+.fa-facebook{
+    color:rgb(55, 55, 170);
+}
+.fa-instagram{
+    color:rgb(248, 186, 14);
+}
+.fa-youtube{
+    color:rgb(194, 18, 18);
+}
+.fa-envelope{
+    color:rgb(133, 29, 143);
+}
+.fa-twitter{
+    color:rgb(11, 188, 194);
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-youtube:hover,.fa-envelope:hover,.fa-twitter:hover{
+    color:var(--fifth-color);
+}
+/* ***************Ending of footer section********************* */
+/***************************************************************************************************/
+/* ************beginning of about main section***************** */
+.about-container{
+    grid-area: about-container;
+}
+.about-container .about-main{
+    display:flex;
+    flex-direction: column;
+}
+.about-container .about-main .about-image{
+    background: url("../img/mission.jpg") center/cover no-repeat; 
+    height: 100vh;
+    width:100%;
+    opacity: 0.7;
+}
+.about-container .about-main .about-header{
+    position: absolute;
+    color:var(--first-color);
+    top: 40%;
+    margin-left: 35%;
+}
+.about-container .about-main .about-text,.mission .mission-main{
+    text-align: center;
+    margin: 5% 10% ;
+}
+.about-container .about-main .about-text{
+    color: var(--second-color); 
+}
+/* ***************Ending of about main section********************* */
+
+/* ***************beginning of mission section*************** */
+.mission{
+    grid-area: mission;
+    position: relative;
+}
+.mission .mission-background{
+    background: url("../img/gray.jpg") center/cover no-repeat; 
+    height: 100vh;
+    opacity: 0.3;
+}
+.mission .mission-main{
+    color: var(--fourth-color);
+    position: absolute;
+    top: 5%;
+}
+/* ***************Ending of mission section****************** */
+
+/* ***************beginning of team section***************** */
+.team{
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.team .team-background{
+    background: url("../img/teamback.jpg") center/cover no-repeat; 
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+}
+.team .team-header{
+    text-align: center;
+    margin: 5% 10%;
+    color: var(--third-color);
+    position: absolute;
+    top: 2%;
+}
+.team .cards-of-team{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.team .cards-of-team .team-member-card {
+    width: 30%;
+    height: 450px;
+}
+.team .cards-of-team .team-member-card h5,.team-member-card p {
+    padding: 5%;
+}
+/* ***************Ending of team section******************** */
+
+/* **************beginning of team section***************** */
+.contact{
+    grid-area: contact;
+    color: var(--second-color);
+    margin-top: 20%;
+    background: url("../img/orangeback.jpg") center/cover no-repeat; 
+    opacity: 1;
+    width: 100%;
+}
+.contact .header-margin,
+.contact .contact-container{
+    margin: 5% 10% ;
+}
+.contact .contact-container{
+    grid-area: contact;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+.contact .contact-container .contact-info h4{
+    padding:5%;
+}
+/***************** form section *****************/
+fieldset {
+    color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 50%;
+    text-align: center;
+    border: 1.5px dashed var(--second-color);
+    padding: 2%;
+}
+input , textarea, label{
+    width: 85%;
+    margin:0 0 2% 7.5%;
+    padding: 1%;
+}
+label{
+    font-size: 0.9em;
+}
+.submit-button{
+    padding: 2%;
+    width: 20%;
+    margin-left: 40%;
+    font-size: 0.9em;
+    border: 0;
+    cursor: pointer;
+}
+/* ***************Ending of team section******************** */
+/***************************************************************************************************/
+/* *************beginning of adopt overview section*************** */
+.adopt-container{
+    grid-area: over;
+    display: flex;
+    position: absolute;
+    top: 20%;
+}
+.adopt-container .div-background{
+    background-image: url("../img/orback.jpg");
+    position: relative;
+    height: 130vh;
+}
+.adopt-container, .how-to-adopt{
+    margin:0 5%;
+}
+.adopt-container .adoption-overview{
+    color: var(--third-color);
+    width: 100%;
+    margin-top: 4%;
+}
+.adopt-container .adoption-overview div p{
+    text-align: justify;
+    color: var(--second-color);
+}
+.adopt-container .adoption-overview div img{
+    width:50%;
+    height: 80vh;
+    float: right;
+    margin-left: 2%;
+    opacity: 0.9;
+}
+/* ***************Ending of overview section********************* */
+
+/* ************beginning of how to adopt section**************** */
+.how-to-adopt {
+    grid-area: how; 
+    position: relative;
+    margin-top: 4%;
+}
+.how-to-adopt .div-background{
+    background-image: url("../img/how.jpg");
+    opacity: 0.4; 
+}
+.how-to-adopt .how-to-adopt-items{
+    color: var(--fourth-color);
+    position: absolute;
+    top:3%;
+    color: var(--fourth-color);
+}
+.how-to-adopt .how-to-adopt-items p{
+    margin-bottom: 2%;
+    text-align: justify;
+}
+/* ************Ending of how to adopt section****************** */
+
+/* ***************beginning of fee section******************** */
+.adoption-fee{
+    grid-area: fee;
+    margin-bottom: 10%;
+    color: var(--second-color);
+}
+.adoption-fee .cat-adoption, .adoption-fee .dog-adoption{
+    display: flex;
+    margin: 4%;
+}
+.adoption-fee .cat-adoption{
+    border-bottom:1px solid var(--second-color);
+    padding-bottom: 3%;
+}
+.adoption-fee .cat-adoption img, .adoption-fee .dog-adoption img{
+    width:37%;
+    margin-top: 2%;
+    opacity: 0.8;
+}
+h3, h4{
+    margin: 2% 3%;
+}
+.adoption-fee .cat-adoption div ,.adoption-fee .dog-adoption div {
+    color: var(--second-color);
+}
+.adoption-fee .cat-adoption div ul,.adoption-fee .dog-adoption div ul{
+    margin:0 0 6% 6%;
+}
+.adoption-fee .cat-adoption div .btn,.adoption-fee .dog-adoption div .btn{
+    background-color: var(--first-color);
+    color: var(--third-color);
+    font-size: 0.9em;
+    margin: 4%;
+}
+.adoption-fee .cat-adoption div .btn:hover,.adoption-fee .dog-adoption div .btn:hover{
+    background-color: var(--sixth-color);
+    color: var(--fourth-color);
+}
+/* ***************Ending of fee section********************* */

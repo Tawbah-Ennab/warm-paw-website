@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/7dd43b4915.js" crossorigin="anonymous"></script>
+    <title>Warm Paw - Login</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
+</head>
+<body>
+    <div class="signup-background">
+        <div class="all-signup-container">
+            <a href="warm-paw-website.html">
+                <div class="login-logo">
+                <img src="./assets/img/logo.png" alt="logo">
+                <h2>WARM PAW</h2>
+               </div>
+            </a>
+
+            <h4>Registering to this website, you accept our 
+            <a href="#">Terms of use</a>  and our <a href="#">Privacy policy</a> </h4>
+
+            <div class="signup-form-container">
+                <form action="/" method="post" class="signup-form">
+                    <h2 class="header-margin">Sign Up</h2>
+                    <!-- <img src="./assets/img/avatar.png" alt="Avatar" class="avatar"> -->
+
+                    <div class="signup-social-media">
+                        <a href="#" ><i class="fab fa-facebook"></i></a>
+                        <a href="#" ><i class="fab fa-twitter"></i></a>
+                        <a href="#" ><i class="fab fa-google"></i></a>
+                    </div>
+                    <h4 class="social-header">Or Sign up with</h4>
+                    <div class="signup-labels">
+                        <input type="text" name="uname" placeholder="&#xf007; First Name" required>
+                        <input type="text" name="lname" placeholder="&#xf007; Last Name" required>
+                        <input type="email" name="umail" placeholder="&#xf0e0; Email" required>
+                        <input type="password" name="pass" placeholder="&#xF023; Password" required>
+                        <input type="password" name="pass" placeholder="&#xF023; Confirm Password" required>
+                    
+                        <input list="user-gender" name="gender" id="gender" placeholder="&#xf228; Gender" required>
+                        <datalist id="user-gender">
+                            <option value="Female"></option>
+                            <option value="Male"></option>
+                        </datalist>
+                        <input type="date" name="bddate" id="bdptdate" placeholder="Birthday" required>
+                    </div>
+                    <input type="submit" value="Sign up" class="btn signup-submit-button">
+
+                    <h4>Already have <a href="./login.html"> regesterd?</a> </h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
